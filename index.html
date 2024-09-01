@@ -244,7 +244,7 @@
                   <span class="icon">
                       <i class="fab fa-twitter"></i>
                   </span>
-                  <span>Twitter</span>
+                  <span>Summary</span>
                 </a>
               </span>
 
@@ -273,7 +273,7 @@
       </video>
       <h2 class="subtitle has-text-centered">
       </br>
-        <span class="has-text-weight-bold">TL;DR:</span> <span class="dcliport"><b>GenSim2</b></span> uses multimodal LLMs to generate vast amounts of articulated, 6-dof robotic tasks in simulation for pre-training a generalist 3D multitask policies.
+        <span class="has-text-weight-bold">TL;DR:</span> <span class="dcliport"><b>GenSim2</b></span> uses multimodal LLMs to generate vast amounts of articulated, 6-dof robotic tasks in simulation for pre-training a generalist 3D multitask policies. The framework "amplifies" limited real world tasks and trajectories with foundation models. 
       </h2>
     </div>
   </div>
@@ -372,7 +372,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
 
         <div class="columns">
           <div class="column has-text-centered">
-            <h3 class="title is-5">GPT 4</h3>
+            <h3 class="title is-5">Varying Tasks</h3>
 
             Task  
             <div class="select is-small">     
@@ -412,7 +412,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
         </div>        
         <div class="column is-half">
 
-            <h3 class="title is-5">Code Llama 13B Instruct (Finetuned)</h3>
+            <h3 class="title is-5">Varying Objects</h3>
 
             Task  
             <div class="select is-small">     
@@ -471,7 +471,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-half">
-        <h3 class="title is-3">Real Only</h3>
+        <h4 class="title is-4">Real Only</h4>
 
         <div class="columns">
           <div class="column has-text-centered">
@@ -513,7 +513,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
         </div>
     </div>        
       <div class="column is-half">
-        <h3 class="title is-3">Sim+Real</h3>
+        <h4 class="title is-4">Sim+Real</h4>
         <div class="columns">
           <div class="column has-text-centered">
             Task  
@@ -551,9 +551,13 @@ Combining the proposed pipeline and the policy architecture, we show a promising
                       type="video/mp4">
             </video>
           </div>
+
         </div>
-        Compared
   </div>
+ </div>
+         Compared to using only 10 real-world trajectories, incorporating generated simulation data enhances the generalization of real-world policies across multiple tasks.
+ </div>
+
 </section>
 
 <section class="section">
@@ -565,7 +569,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
         <img src="media/common/gensim2_pipeline.png" class="interpolation-image" alt="Interpolate start reference image." style="width:100%"/>   
     <br/>
   </div>
-  Multi-modal task solver generation pipeline that leverages GPT-4 and optimization config to scalably solve manipulation tasks.
+  Multi-modal task solver generation pipeline that utilizes GPT-4 and optimization configurations for scalable manipulation task solutions.
 </div>
 
 
@@ -599,7 +603,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
         <img src="media/common/planner.png" class="interpolation-image" alt="Interpolate start reference image." style="width:100%"/>   
     <br/>
   </div>
-We show how to leverage the kPAM planner to solve the task OpenBox. First, constraints are defined to make the gripper get contact with the box lid. Then based on the this actuation pose, some actuation motions are assigned to complete the motion of opening a box.
+We demonstrate how to leverage the keypoint planner to solve the OpenBox task. Initially, constraints are defined to ensure the gripper contacts the box lid. Based on this actuation pose, specific motions are assigned to complete the task of opening the box.
 </div>
 
 
