@@ -372,14 +372,11 @@ Combining the proposed pipeline and the policy architecture, we show a promising
 
         <div class="columns">
           <div class="column has-text-centered">
-            <h3 class="title is-5">Varying Tasks</h3>
-
             Task  
             <div class="select is-small">     
               <select id="single-menu-tasks" onchange="updateGPT()">
-	<option value="color-coordinated-block-insertion">color-coordinated-block-insertion</option>
-	<option value="container-block-sorting">container-block-sorting</option>
-	<option value="color-coordinated-ball-stacking">color-coordinated-ball-stacking</option>
+	<option value="open-box">open-box</option>
+	<option value="close-box">close-box</option>
               </select>
             </div>
             instance
@@ -400,58 +397,15 @@ Combining the proposed pipeline and the policy architecture, we show a promising
                    muted
                    autoplay
                    loop
-                   width="80%">
-              <source src="media/all_task_videos/cylinder-ring-stack-videos/000003.mp4"
+                   width="100%">
+              <source src="media/all_task_videos/open-box-videos/000001.mp4"
                       type="video/mp4">
             </video>
 
           </div>
 
         </div>
-    <!--       <button style="background-color: #4CAF50; color: white;" onclick="populateDemo(document.getElementById('single-menu-tasks').value, 1)">Show Code</button> -->
-        </div>        
-        <div class="column is-half">
-
-            <h3 class="title is-5">Varying Objects</h3>
-
-            Task  
-            <div class="select is-small">     
-              <select id="single-menu-tasks-llama" onchange="updateLlama()">
-	<option value="code-stack-wall">code-stack-wall</option>
-	<option value="code-blue-on-red-cylinder">code-blue-on-red-cylinder</option>
-	<option value="code-ball-on-line">code-ball-on-line</option>
-	<option value="code-rainbow-pyramid">code-rainbow-pyramid</option>
-	<option value="code-cylinder-in-zone">code-cylinder-in-zone</option>
-              </select>
-            </div>
-            instance
-            <div class="select is-small">
-              <select id="single-menu-instances-llama" onchange="updateLlama()">
-              <option value="01"  selected="selected">01</option>
-              <option value="02">02</option>
-              <option value="03">03</option>
-              <option value="04">04</option>
-              <option value="05">05</option>
-              </select>
-            </div>
-            <br/>
-            <br/>
-
-            <video id="single-task-result-video-llama"
-                   controls
-                   muted
-                   autoplay
-                   loop
-                   width="80%">
-              <source src="media/all_task_videos/code-blue-on-red-cylinder-videos/000001.mp4"
-                      type="video/mp4">
-            </video>
-
-	    <!--/ Paper video. -->
-
-        </br>
-
-      </div>
+      </div>        
 
     </div>
   </div>
