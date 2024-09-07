@@ -45,12 +45,11 @@
 
       var video = document.getElementById("single-task-result-video");
       video.src = "media/all_task_videos/" + 
-                  task + 
-                  "-videos/" +
-                  "0000" + 
+                  task +
+                  "/0000" + 
                   inst + 
                   ".mp4";
-      video.playbackRate = 2.0;
+      video.playbackRate = 0.5;
       video.play();
     }
 
@@ -63,7 +62,7 @@
       var video = document.getElementById("single-task-result-video-cliport");
       video.src = "media/realworld_task_videos/" + 
                   task + "/real_" +  inst  + ".mp4";
-      video.playbackRate = 2.0;
+      video.playbackRate = 1.0;
       video.play();
     }
 
@@ -78,7 +77,7 @@
       video.src = "media/realworld_task_videos/" + 
                   task + 
                   "/cotrain_" +  inst  + ".mp4";
-      video.playbackRate = 2.0;
+      video.playbackRate = 1.0;
       video.play();
     }
 
@@ -375,8 +374,28 @@ Combining the proposed pipeline and the policy architecture, we show a promising
             Task  
             <div class="select is-small">     
               <select id="single-menu-tasks" onchange="updateGPT()">
-	<option value="open-box">open-box</option>
-	<option value="close-box">close-box</option>
+                <option value="OpenBox">OpenBox</option>
+                <option value="CloseLaptop">CloseLaptop</option>
+                <option value="RelocateSuitcase">RelocateSuitcase</option>
+                <option value="OpenBox">OpenBox</option>
+                <option value="PressToasterLever">PressToasterLever</option>
+                <option value="CloseSafe">CloseSafe</option>
+                <option value="TurnOffFaucet">TurnOffFaucet</option>
+                <option value="SwingSuitcaseLidOpen">SwingSuitcaseLidOpen</option>
+                <option value="LiftBucketUpright">LiftBucketUpright</option>
+                <option value="OpenSafe">OpenSafe</option>
+                <option value="PushToasterForward">PushToasterForward</option>
+                <option value="CloseMicrowave">CloseMicrowave</option>
+                <option value="CloseBox">CloseBox</option>
+                <option value="MoveBagForward">MoveBagForward</option>
+                <option value="OpenRefrigeratorDoor">OpenRefrigeratorDoor</option>
+                <option value="CloseRefrigeratorDoor">CloseRefrigeratorDoor</option>
+                <option value="CloseSuitcaseLid">CloseSuitcaseLid</option>
+                <option value="OpenLaptop">OpenLaptop</option>
+                <option value="SwingBucketHandle">SwingBucketHandle</option>
+                <option value="TurnOnFaucet">TurnOnFaucet</option>
+                <option value="RotateMicrowaveDoor">RotateMicrowaveDoor</option>
+  
               </select>
             </div>
             instance
@@ -398,7 +417,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
                    autoplay
                    loop
                    width="100%">
-              <source src="media/all_task_videos/open-box-videos/000001.mp4"
+              <source src="media/all_task_videos/OpenBox/000001.mp4"
                       type="video/mp4">
             </video>
 
