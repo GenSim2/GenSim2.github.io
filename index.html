@@ -266,7 +266,7 @@
 <section class="hero teaser">
   <div class="container is-fullhd">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop height="100%">
+      <video id="teaser" autoplay muted loop height="100%" controls>
         <source src="media/common/GenSim2_demo.mp4"
                 type="video/mp4">
       </video>
@@ -344,32 +344,25 @@ Combining the proposed pipeline and the policy architecture, we show a promising
 
     <div class="columns is-centered has-text-centered">
       <div class="column is-half">
-
+        <h4 class="title is-4">Primitive Tasks</h4>
         <div class="columns">
           <div class="column has-text-centered">
             Task  
             <div class="select is-small">     
               <select id="single-menu-tasks" onchange="updateGPT()">
-                <option value="OpenBox">OpenBox</option>
-                <option value="CloseLaptop">CloseLaptop</option>
                 <option value="RelocateSuitcase">RelocateSuitcase</option>
-                <option value="OpenBox">OpenBox</option>
                 <option value="PressToasterLever">PressToasterLever</option>
                 <option value="CloseSafe">CloseSafe</option>
-                <option value="TurnOffFaucet">TurnOffFaucet</option>
                 <option value="SwingSuitcaseLidOpen">SwingSuitcaseLidOpen</option>
                 <option value="LiftBucketUpright">LiftBucketUpright</option>
                 <option value="OpenSafe">OpenSafe</option>
                 <option value="PushToasterForward">PushToasterForward</option>
                 <option value="CloseMicrowave">CloseMicrowave</option>
-                <option value="CloseBox">CloseBox</option>
                 <option value="MoveBagForward">MoveBagForward</option>
                 <option value="OpenRefrigeratorDoor">OpenRefrigeratorDoor</option>
                 <option value="CloseRefrigeratorDoor">CloseRefrigeratorDoor</option>
                 <option value="CloseSuitcaseLid">CloseSuitcaseLid</option>
-                <option value="OpenLaptop">OpenLaptop</option>
                 <option value="SwingBucketHandle">SwingBucketHandle</option>
-                <option value="TurnOnFaucet">TurnOnFaucet</option>
                 <option value="RotateMicrowaveDoor">RotateMicrowaveDoor</option>
   
               </select>
@@ -400,7 +393,40 @@ Combining the proposed pipeline and the policy architecture, we show a promising
           </div>
 
         </div>
-      </div>        
+      </div> 
+      
+      <div class="column is-half">
+        <h4 class="title is-4">Long-horizon Tasks</h4>
+        <div class="columns">
+          <div class="column has-text-centered">
+            Task  
+            <div class="select is-small">     
+              <select id="single-menu-tasks" onchange="updateGPT()">
+                <option value="RelocateSuitcase">RelocateSuitcase</option>
+              </select>
+            </div>
+            instance
+            <div class="select is-small">
+              <select id="single-menu-instances" onchange="updateGPT()">
+              <option value="01"  selected="selected">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              </select>
+            </div>
+            <br/>
+            <br/>
+
+            <video id="single-task-result-video" controls muted autoplay loop width="100%">
+              <source src="media/all_task_videos/OpenBox/000001.mp4"
+                      type="video/mp4">
+            </video>
+
+          </div>
+
+        </div>
+      </div>  
 
     </div>
   </div>
