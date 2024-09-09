@@ -64,7 +64,7 @@
                   "/0000" + 
                   inst + 
                   ".mp4";
-      video.playbackRate = 0.5;
+      video.playbackRate = 2.0;
       video.play();
     }
 
@@ -395,7 +395,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
             <br/>
             <br/>
 
-            <video id="single-task-result-video"
+            <video id="single-task-primitive-video"
                    controls
                    muted
                    autoplay
@@ -404,6 +404,10 @@ Combining the proposed pipeline and the policy architecture, we show a promising
               <source src="media/all_task_videos/RelocateSuitcase/000001.mp4"
                       type="video/mp4">
             </video>
+
+            <script>
+              document.getElementById("single-task-primitive-video").playbackRate = 0.5;
+            </script>
 
           </div>
 
@@ -417,9 +421,9 @@ Combining the proposed pipeline and the policy architecture, we show a promising
             Task  
             <div class="select is-small">     
               <select id="single-menu-tasks2" onchange="updateGPT2()">
-                <option value="PrepareBreakfast" selected="selected">PrepareBreakfast</option>
-                <option value="CleanKitchenware">CleanKitchenware</option>
-                <option value="OrganizeDeskAndRest">OrganizeDeskAndRest</option>
+                <option value="PrepareBreakfast" selected="selected">PrepareBreakfast(Teleoperated)</option>
+                <option value="CleanKitchenware">CleanKitchenware(Teleoperated)</option>
+                <option value="OrganizeDeskAndRest">OrganizeDeskAndRest(Teleoperated)</option>
                 <option value="SecureGoldInSafe">SecureGoldInSafe</option>
               </select>
             </div>
@@ -427,16 +431,16 @@ Combining the proposed pipeline and the policy architecture, we show a promising
             <div class="select is-small">
               <select id="single-menu-instances2" onchange="updateGPT2()">
               <option value="01"  selected="selected">01</option>
-              <option value="02">02</option>
+              <!-- <option value="02">02</option>
               <option value="03">03</option>
               <option value="04">04</option>
-              <option value="05">05</option>
+              <option value="05">05</option> -->
               </select>
             </div>
             <br/>
             <br/>
 
-            <video id="single-task-result-video2"
+            <video id="single-task-longhorizon-video"
                    controls
                    muted
                    autoplay
@@ -445,6 +449,10 @@ Combining the proposed pipeline and the policy architecture, we show a promising
               <source src="media/all_task_videos/PrepareBreakfast/000001.mp4"
                       type="video/mp4">
             </video>
+
+            <script>
+              document.getElementById("single-task-longhorizon-video").playbackRate = 2.0;
+            </script>
 
           </div>
 
