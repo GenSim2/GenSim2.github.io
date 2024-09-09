@@ -37,13 +37,28 @@
       code.style.display = 'none';
     }
   }    
-    function updateGPT() {
+  function updateGPT() {
       var task = document.getElementById("single-menu-tasks").value;
       var inst = document.getElementById("single-menu-instances").value;
 
       console.log("gpt", task, inst)
 
       var video = document.getElementById("single-task-result-video");
+      video.src = "media/all_task_videos/" + 
+                  task +
+                  "/0000" + 
+                  inst + 
+                  ".mp4";
+      video.playbackRate = 0.5;
+      video.play();
+    }
+  function updateGPT2() {
+      var task = document.getElementById("single-menu-tasks2").value;
+      var inst = document.getElementById("single-menu-instances2").value;
+
+      console.log("gpt", task, inst)
+
+      var video = document.getElementById("single-task-result-video2");
       video.src = "media/all_task_videos/" + 
                   task +
                   "/0000" + 
@@ -221,7 +236,7 @@
           </div>  
           <br>
           <div class="is-size-5 publication-authors">
-            CoRL 2024
+            Conference on Robot Learning, 2024
           </div>  
                  
           <div class="column has-text-centered">
@@ -386,7 +401,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
                    autoplay
                    loop
                    width="100%">
-              <source src="media/all_task_videos/OpenBox/000001.mp4"
+              <source src="media/all_task_videos/RelocateSuitcase/000001.mp4"
                       type="video/mp4">
             </video>
 
@@ -401,8 +416,8 @@ Combining the proposed pipeline and the policy architecture, we show a promising
           <div class="column has-text-centered">
             Task  
             <div class="select is-small">     
-              <select id="single-menu-tasks" onchange="updateGPT()">
-                <option value="PrepareBreakfast">PrepareBreakfast</option>
+              <select id="single-menu-tasks2" onchange="updateGPT2()">
+                <option value="PrepareBreakfast" selected="selected">PrepareBreakfast</option>
                 <option value="CleanKitchenware">CleanKitchenware</option>
                 <option value="OrganizeDeskAndRest">OrganizeDeskAndRest</option>
                 <option value="SecureGoldInSafe">SecureGoldInSafe</option>
@@ -410,7 +425,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
             </div>
             instance
             <div class="select is-small">
-              <select id="single-menu-instances" onchange="updateGPT()">
+              <select id="single-menu-instances2" onchange="updateGPT2()">
               <option value="01"  selected="selected">01</option>
               <option value="02">02</option>
               <option value="03">03</option>
@@ -421,13 +436,13 @@ Combining the proposed pipeline and the policy architecture, we show a promising
             <br/>
             <br/>
 
-            <video id="single-task-result-video"
+            <video id="single-task-result-video2"
                    controls
                    muted
                    autoplay
                    loop
                    width="100%">
-              <source src="media/all_task_videos/SecureGoldInSafe/000001.mp4"
+              <source src="media/all_task_videos/PrepareBreakfast/000001.mp4"
                       type="video/mp4">
             </video>
 
@@ -464,7 +479,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
                 <option value="open-laptop">open-laptop</option>
                 <option value="open-box">open-box</option>
                 <option value="open-safe">open-safe</option>
-                <option value="close-laptop">close-laptop</option>
+                <option value="close-laptop" selected="selected">close-laptop</option>
                 <option value="close-box">close-box</option>
                 <option value="close-safe">close-safe</option>
                 <option value="close-drawer">close-drawer</option>
@@ -487,7 +502,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
                    autoplay
                    loop
                    width="80%">
-              <source src="media/realworld_task_videos/open-laptop/real_01.mp4"
+              <source src="media/realworld_task_videos/close-laptop/real_01.mp4"
                       type="video/mp4">
             </video>
           </div>
@@ -503,7 +518,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
                 <option value="open-laptop">open-laptop</option>
                 <option value="open-box">open-box</option>
                 <option value="open-safe">open-safe</option>
-                <option value="close-laptop">close-laptop</option>
+                <option value="close-laptop" selected="selected">close-laptop</option>
                 <option value="close-box">close-box</option>
                 <option value="close-safe">close-safe</option>
                 <option value="close-drawer">close-drawer</option>
@@ -526,7 +541,7 @@ Combining the proposed pipeline and the policy architecture, we show a promising
                    autoplay
                    loop
                    width="80%">
-              <source src="media/realworld_task_videos/open-laptop/cotrain_01.mp4"
+              <source src="media/realworld_task_videos/close-laptop/cotrain_01.mp4"
                       type="video/mp4">
             </video>
           </div>
