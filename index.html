@@ -567,47 +567,6 @@ Combining the proposed pipeline and the policy architecture, we show a promising
 
 </section>
 
-
-<section>
-  <div class="container is-max-widescreen">
-    <hr style="border: 1px solid black; width: 50%;">
-
-<div onclick="toggleImg(3)">&#9654; Task Generation Ablation Experiment</div>
-
-
-<div id="myDIV3" style="display: none; margin-top: 20px;">
-    <div style="display: flex; gap: 20px;">
-        <img src="media/common/task_gen.png" class="interpolation-image" alt="Interpolate start reference image." style="width:100%"/>   
-    </div>
-</div>
-
-
-<div onclick="toggleImg(2)">&#9654; Real World Experiment</div>
-
-
-<div id="myDIV2" style="display: none; margin-top: 20px;">
-    <div style="display: flex; gap: 20px;">
-        <img src="media/common/realworld_exp.png" class="interpolation-image" alt="Interpolate start reference image." style="width:100%"/>   
-    </div>
-</div>
-
-</div>
-
-<script>
-    function toggleImg(index) {
-        var x = document.getElementById("myDIV"+index);
-        var arrow = document.querySelector('div');
-        if (x.style.display === "none") {
-            x.style.display = "block";
-            // arrow.innerHTML = "&#9660; Comparison with Single-Task Policy";
-        } else {
-            x.style.display = "none";
-            // arrow.innerHTML = "&#9654; Comparison with Single-Task Policy";
-        }
-    }
-</script>
-</section>
-
 <section class="section">
   <div class="container is-max-widescreen">
 
@@ -685,22 +644,30 @@ Combining the proposed pipeline and the policy architecture, we show a promising
 
 
 
-<section class="hero teaser">
+<section class="section" id="BibTeX">
+<!-- <section class="hero teaser"> -->
   <div class="container is-max-widescreen">
-  <h3 class="title is-3 has-text-centered">BibTeX</h3> <pre class="mt-4 overflow-x-scroll bg-slate-100 p-8">
-@inproceedings{hua2024gensim2,
-author    = {Pu Hua, Minghuan Liu, Annabella Macaluso, Yunfeng Lin, Weinan Zhang, Huazhe Xu, Lirui Wang},
-title     = {GenSim2: Scalable Simulation Data Generation with Multi-modal LLMs},
-booktitle = {Conference on Robot Learning},
-year      = {2024}}</pre> </div> </div> 
+    <h3 class="title is-3 has-text-centered">BibTeX</h3> 
+    <!-- <pre class="mt-4 overflow-x-scroll bg-slate-100 p-8"> -->
+    <pre>
+      <code>
+      @inproceedings{hua2024gensim2,
+      author    = {Pu Hua, Minghuan Liu, Annabella Macaluso, Yunfeng Lin, Weinan Zhang, Huazhe Xu, Lirui Wang},
+      title     = {GenSim2: Scalable Simulation Data Generation with Multi-modal LLMs},
+      booktitle = {Conference on Robot Learning},
+      year      = {2024}}
+    </code>
+    </pre> 
+  </div>
 </section>
 <br>
 <br>
-<section class="hero teaser">
+<section class="section">
   <div class="container is-max-widescreen">
-  <h3 class="title is-3 has-text-centered">Acknowledgement</h3>  
-  <br>
-We would like to thank Professor Xiaolong Wang for his kind support and discussion of this project. We thank Yuzhe Qin and Fanbo Xiang for their generous help in <a href="https://sapien.ucsd.edu/">SAPIEN</a> development. We thank Mazeyu Ji for his help on real-world experiments.  </div> </div> 
+    <h3 class="title is-3 has-text-centered">Acknowledgement</h3>  
+    <br>
+    <p class="has-text-justified">We would like to thank Professor Xiaolong Wang for his kind support and discussion of this project. We thank Yuzhe Qin and Fanbo Xiang for their generous help in <a href="https://sapien.ucsd.edu/">SAPIEN</a> development. We thank Mazeyu Ji for his help on real-world experiments. </p>
+  </div> 
 </section>
 
 <footer class="footer">
