@@ -567,47 +567,6 @@ Combining the proposed pipeline and the policy architecture, we show a promising
 
 </section>
 
-
-<section>
-  <div class="container is-max-widescreen">
-    <hr style="border: 1px solid black; width: 50%;">
-
-<div onclick="toggleImg(3)">&#9654; Task Generation Ablation Experiment</div>
-
-
-<div id="myDIV3" style="display: none; margin-top: 20px;">
-    <div style="display: flex; gap: 20px;">
-        <img src="media/common/task_gen.png" class="interpolation-image" alt="Interpolate start reference image." style="width:100%"/>   
-    </div>
-</div>
-
-
-<div onclick="toggleImg(2)">&#9654; Real World Experiment</div>
-
-
-<div id="myDIV2" style="display: none; margin-top: 20px;">
-    <div style="display: flex; gap: 20px;">
-        <img src="media/common/realworld_exp.png" class="interpolation-image" alt="Interpolate start reference image." style="width:100%"/>   
-    </div>
-</div>
-
-</div>
-
-<script>
-    function toggleImg(index) {
-        var x = document.getElementById("myDIV"+index);
-        var arrow = document.querySelector('div');
-        if (x.style.display === "none") {
-            x.style.display = "block";
-            // arrow.innerHTML = "&#9660; Comparison with Single-Task Policy";
-        } else {
-            x.style.display = "none";
-            // arrow.innerHTML = "&#9654; Comparison with Single-Task Policy";
-        }
-    }
-</script>
-</section>
-
 <section class="section">
   <div class="container is-max-widescreen">
 
