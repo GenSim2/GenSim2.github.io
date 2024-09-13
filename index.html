@@ -43,7 +43,7 @@
 
       console.log("gpt", task, inst)
 
-      var video = document.getElementById("single-task-result-video");
+      var video = document.getElementById("single-task-primitive-video");
       video.src = "media/all_task_videos/" + 
                   task +
                   "/0000" + 
@@ -58,7 +58,7 @@
 
       console.log("gpt", task, inst)
 
-      var video = document.getElementById("single-task-result-video2");
+      var video = document.getElementById("single-task-longhorizon-video");
       video.src = "media/all_task_videos/" + 
                   task +
                   "/0000" + 
@@ -297,7 +297,7 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop height="100%">
-            <source src="media/realworld_task_videos/close-laptop/real_01_2xspeed.mp4"
+            <source src="media/realworld_task_videos/close-laptop/real_01.mp4"
                     type="video/mp4">
           </video>
         </div>  
@@ -350,114 +350,116 @@ Combining the proposed pipeline and the policy architecture, we show a promising
     </div>
 </section>
 
-<section>
-  <div class="row">
-    <div class="container">
-    <!-- Paper video. -->
-        <h2 class="title is-3 has-text-centered">Generated Task Library</h2>      
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <!-- Paper video. -->
+      <h2 class="title is-3 has-text-centered">Generated Task Library</h2>      
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-half">
-        <h4 class="title is-4">Primitive Tasks</h4>
-        <div class="columns">
-          <div class="column has-text-centered">
-            Task  
-            <div class="select is-small">     
-              <select id="single-menu-tasks" onchange="updateGPT()">
-                <option value="RelocateSuitcase">RelocateSuitcase</option>
-                <option value="PressToasterLever">PressToasterLever</option>
-                <option value="CloseSafe">CloseSafe</option>
-                <option value="SwingSuitcaseLidOpen">SwingSuitcaseLidOpen</option>
-                <option value="LiftBucketUpright">LiftBucketUpright</option>
-                <option value="OpenSafe">OpenSafe</option>
-                <option value="PushToasterForward">PushToasterForward</option>
-                <option value="CloseMicrowave">CloseMicrowave</option>
-                <option value="MoveBagForward">MoveBagForward</option>
-                <option value="OpenRefrigeratorDoor">OpenRefrigeratorDoor</option>
-                <option value="CloseRefrigeratorDoor">CloseRefrigeratorDoor</option>
-                <option value="CloseSuitcaseLid">CloseSuitcaseLid</option>
-                <option value="SwingBucketHandle">SwingBucketHandle</option>
-                <option value="RotateMicrowaveDoor">RotateMicrowaveDoor</option>
-  
-              </select>
+      <!-- <div class="container"> -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-half">
+          <h4 class="title is-4">Primitive Tasks</h4>
+          <div class="columns">
+            <div class="column has-text-centered">
+              Task  
+              <div class="select is-small">     
+                <select id="single-menu-tasks" onchange="updateGPT()">
+                  <option value="RelocateSuitcase">RelocateSuitcase</option>
+                  <option value="PressToasterLever">PressToasterLever</option>
+                  <option value="CloseSafe">CloseSafe</option>
+                  <option value="SwingSuitcaseLidOpen">SwingSuitcaseLidOpen</option>
+                  <option value="LiftBucketUpright">LiftBucketUpright</option>
+                  <option value="OpenSafe">OpenSafe</option>
+                  <option value="PushToasterForward">PushToasterForward</option>
+                  <option value="CloseMicrowave">CloseMicrowave</option>
+                  <option value="MoveBagForward">MoveBagForward</option>
+                  <option value="OpenRefrigeratorDoor">OpenRefrigeratorDoor</option>
+                  <option value="CloseRefrigeratorDoor">CloseRefrigeratorDoor</option>
+                  <option value="CloseSuitcaseLid">CloseSuitcaseLid</option>
+                  <option value="SwingBucketHandle">SwingBucketHandle</option>
+                  <option value="RotateMicrowaveDoor">RotateMicrowaveDoor</option>
+    
+                </select>
+              </div>
+              instance
+              <div class="select is-small">
+                <select id="single-menu-instances" onchange="updateGPT()">
+                <option value="01"  selected="selected">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                </select>
+              </div>
+              <br/>
+              <br/>
+
+              <video id="single-task-primitive-video"
+                    controls
+                    muted
+                    autoplay
+                    loop
+                    width="100%">
+                <source src="media/all_task_videos/RelocateSuitcase/000001.mp4"
+                        type="video/mp4">
+              </video>
+
+              <script>
+                document.getElementById("single-task-primitive-video").playbackRate = 0.5;
+              </script>
+
             </div>
-            instance
-            <div class="select is-small">
-              <select id="single-menu-instances" onchange="updateGPT()">
-              <option value="01"  selected="selected">01</option>
-              <option value="02">02</option>
-              <option value="03">03</option>
-              <option value="04">04</option>
-              <option value="05">05</option>
-              </select>
-            </div>
-            <br/>
-            <br/>
-
-            <video id="single-task-primitive-video"
-                   controls
-                   muted
-                   autoplay
-                   loop
-                   width="100%">
-              <source src="media/all_task_videos/RelocateSuitcase/000001.mp4"
-                      type="video/mp4">
-            </video>
-
-            <script>
-              document.getElementById("single-task-primitive-video").playbackRate = 0.5;
-            </script>
 
           </div>
+        </div> 
+        
+        <div class="column is-half">
+          <h4 class="title is-4">Long-horizon Tasks</h4>
+          <div class="columns">
+            <div class="column has-text-centered">
+              Task  
+              <div class="select is-small">     
+                <select id="single-menu-tasks2" onchange="updateGPT2()">
+                  <option value="PrepareBreakfast" selected="selected">PrepareBreakfast(Teleop)</option>
+                  <option value="CleanKitchenware">CleanKitchenware(Teleop)</option>
+                  <option value="OrganizeDeskAndRest">OrganizeDeskAndRest(Teleop)</option>
+                  <option value="SecureGoldInSafe">SecureGoldInSafe</option>
+                </select>
+              </div>
+              instance
+              <div class="select is-small">
+                <select id="single-menu-instances2" onchange="updateGPT2()">
+                <option value="01"  selected="selected">01</option>
+                <!-- <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option> -->
+                </select>
+              </div>
+              <br/>
+              <br/>
 
-        </div>
-      </div> 
-      
-      <div class="column is-half">
-        <h4 class="title is-4">Long-horizon Tasks</h4>
-        <div class="columns">
-          <div class="column has-text-centered">
-            Task  
-            <div class="select is-small">     
-              <select id="single-menu-tasks2" onchange="updateGPT2()">
-                <option value="PrepareBreakfast" selected="selected">PrepareBreakfast(Teleoperated)</option>
-                <option value="CleanKitchenware">CleanKitchenware(Teleoperated)</option>
-                <option value="OrganizeDeskAndRest">OrganizeDeskAndRest(Teleoperated)</option>
-                <option value="SecureGoldInSafe">SecureGoldInSafe</option>
-              </select>
+              <video id="single-task-longhorizon-video"
+                    controls
+                    muted
+                    autoplay
+                    loop
+                    width="100%">
+                <source src="media/all_task_videos/PrepareBreakfast/000001.mp4"
+                        type="video/mp4">
+              </video>
+
+              <script>
+                document.getElementById("single-task-longhorizon-video").playbackRate = 2.0;
+              </script>
+
             </div>
-            instance
-            <div class="select is-small">
-              <select id="single-menu-instances2" onchange="updateGPT2()">
-              <option value="01"  selected="selected">01</option>
-              <!-- <option value="02">02</option>
-              <option value="03">03</option>
-              <option value="04">04</option>
-              <option value="05">05</option> -->
-              </select>
-            </div>
-            <br/>
-            <br/>
-
-            <video id="single-task-longhorizon-video"
-                   controls
-                   muted
-                   autoplay
-                   loop
-                   width="100%">
-              <source src="media/all_task_videos/PrepareBreakfast/000001.mp4"
-                      type="video/mp4">
-            </video>
-
-            <script>
-              document.getElementById("single-task-longhorizon-video").playbackRate = 2.0;
-            </script>
 
           </div>
-
-        </div>
-      </div>  
-
+        </div>  
+      </div>
+      <!-- </div> -->
     </div>
   </div>
 </section>
@@ -469,95 +471,99 @@ Combining the proposed pipeline and the policy architecture, we show a promising
 <section class="section">
   <div class="container is-max-widescreen">
     <div class="rows">
-    <!-- Animation. -->
-    <h2 class="title is-3  has-text-centered">Real-Robot Experiments </h2>
+      <!-- Animation. -->
+      <h2 class="title is-3  has-text-centered">Real-Robot Experiments </h2>
 
-    <div class="container  ">
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-half">
-        <h4 class="title is-4">Real Only</h4>
+      <div class="container  ">
+      <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+        <div class="column is-half">
+          <h4 class="title is-4">Real Only</h4>
 
-        <div class="columns">
-          <div class="column has-text-centered">
-            Task  
-            <div class="select is-small">     
-              <select id="single-menu-tasks-cliport" onchange="updateRealWorldCliport()">
-                <option value="open-laptop">open-laptop</option>
-                <option value="open-box">open-box</option>
-                <option value="open-safe">open-safe</option>
-                <option value="close-laptop" selected="selected">close-laptop</option>
-                <option value="close-box">close-box</option>
-                <option value="close-safe">close-safe</option>
-                <option value="close-drawer">close-drawer</option>
-                <option value="swing-bucket">swing-bucket</option>
-              </select>
+          <div class="columns">
+            <div class="column has-text-centered">
+              Task  
+              <div class="select is-small">     
+                <select id="single-menu-tasks-cliport" onchange="updateRealWorldCliport()">
+                  <option value="open-laptop">open-laptop</option>
+                  <option value="open-box">open-box</option>
+                  <option value="open-safe">open-safe</option>
+                  <option value="close-laptop" selected="selected">close-laptop</option>
+                  <option value="close-box">close-box</option>
+                  <option value="close-safe">close-safe</option>
+                  <option value="close-drawer">close-drawer</option>
+                  <option value="swing-bucket">swing-bucket</option>
+                </select>
+              </div>
+              instance
+              <div class="select is-small">
+                <select id="single-menu-instances-cliport" onchange="updateRealWorldCliport()">
+                <option value="01" selected="selected">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>              
+                </select>
+              </div>
+              <br/>
+              <br/>				
+              <video id="single-task-result-video-cliport"
+                    controls
+                    muted
+                    autoplay
+                    loop
+                    width="80%">
+                <source src="media/realworld_task_videos/close-laptop/real_01.mp4"
+                        type="video/mp4">
+              </video>
             </div>
-            instance
-            <div class="select is-small">
-              <select id="single-menu-instances-cliport" onchange="updateRealWorldCliport()">
-              <option value="01" selected="selected">01</option>
-              <option value="02">02</option>
-              <option value="03">03</option>              
-              </select>
-            </div>
-            <br/>
-            <br/>				
-            <video id="single-task-result-video-cliport"
-                   controls
-                   muted
-                   autoplay
-                   loop
-                   width="80%">
-              <source src="media/realworld_task_videos/close-laptop/real_01.mp4"
-                      type="video/mp4">
-            </video>
           </div>
-        </div>
-    </div>        
-      <div class="column is-half">
-        <h4 class="title is-4">Sim+Real</h4>
-        <div class="columns">
-          <div class="column has-text-centered">
-            Task  
-            <div class="select is-small">     
-              <select id="single-menu-tasks-gpt" onchange="updateRealWorldGenSim()">
-                <option value="open-laptop">open-laptop</option>
-                <option value="open-box">open-box</option>
-                <option value="open-safe">open-safe</option>
-                <option value="close-laptop" selected="selected">close-laptop</option>
-                <option value="close-box">close-box</option>
-                <option value="close-safe">close-safe</option>
-                <option value="close-drawer">close-drawer</option>
-                <option value="swing-bucket">swing-bucket</option>
-              </select>
+        </div>        
+        <div class="column is-half">
+          <h4 class="title is-4">Sim+Real</h4>
+          <div class="columns">
+            <div class="column has-text-centered">
+              Task  
+              <div class="select is-small">     
+                <select id="single-menu-tasks-gpt" onchange="updateRealWorldGenSim()">
+                  <option value="open-laptop">open-laptop</option>
+                  <option value="open-box">open-box</option>
+                  <option value="open-safe">open-safe</option>
+                  <option value="close-laptop" selected="selected">close-laptop</option>
+                  <option value="close-box">close-box</option>
+                  <option value="close-safe">close-safe</option>
+                  <option value="close-drawer">close-drawer</option>
+                  <option value="swing-bucket">swing-bucket</option>
+                </select>
+              </div>
+              instance
+              <div class="select is-small">
+                <select id="single-menu-instances-gpt" onchange="updateRealWorldGenSim()">
+                <option value="01" selected="selected">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>             
+                </select>
+              </div>
+              <br/>
+              <br/>				
+              <video id="single-task-result-video-gpt"
+                    controls
+                    muted
+                    autoplay
+                    loop
+                    width="80%">
+                <source src="media/realworld_task_videos/close-laptop/cotrain_01.mp4"
+                        type="video/mp4">
+              </video>
             </div>
-            instance
-            <div class="select is-small">
-              <select id="single-menu-instances-gpt" onchange="updateRealWorldGenSim()">
-              <option value="01" selected="selected">01</option>
-              <option value="02">02</option>
-              <option value="03">03</option>             
-              </select>
-            </div>
-            <br/>
-            <br/>				
-            <video id="single-task-result-video-gpt"
-                   controls
-                   muted
-                   autoplay
-                   loop
-                   width="80%">
-              <source src="media/realworld_task_videos/close-laptop/cotrain_01.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
 
         </div>
+    </div>
+      </div>
+    </div>
+
+    <div>
+      <p> Compared to using only 10 real-world trajectories, incorporating generated simulation data enhances the generalization of real-world policies across multiple tasks. </p>
+    </div>    
   </div>
- </div>
-         Compared to using only 10 real-world trajectories, incorporating generated simulation data enhances the generalization of real-world policies across multiple tasks.
- </div>
 
 </section>
 
